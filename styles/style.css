@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* aplicar un modelo de diseño de caja natural a todos los elementos, pero permitiendo que los componentes cambien*/
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    font-weight: 300;
+    color: #111;
+}
+.banner{
+    position: relative;/*posicionar un elemento respecto al flujo normal de la página*/
+    width: 100%;
+    min-height: 100vh;/*100% de la altura de la ventana gráfica*/
+    display: flex;/*ayuda a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación*/
+    justify-content: center;/* Alinea items en el centro */
+    align-items: center;/* Agrupa los elementos alrededor del centro */
+    background: url(https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+
+}
+.banner .content{
+   max-width: 900px;
+   text-align: center;/*alinea el texto del contenedor al centro*/
+
+}
+.banner .content h2{
+    font-size: 5em;
+    color: #fff;
+}
+.banner .content p{
+    font-size: 1em;
+    color: #fff;
+}
+.btn{
+    font-size: 1em;/*tamaño de la letra*/
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;/*permite establecer un ancho y un alto en el elemento*/
+    padding: 10px 30px;/*establece el espacio de relleno requerido*/
+    margin-top: 20px;
+    text-transform: uppercase;/*cambio a mayusculas del texto*/
+    text-decoration: none;
+    letter-spacing: 2px;/*espacio entre los caracteres*/
+    transition: 0.5s;/*la transicion del boton*/
+}
+.btn:hover{
+    letter-spacing: 6px;/*espacio entre los caracteres cuando el cursor pase sobre el boton*/
+}
+header{
+    position: fixed;/*toman como referencia la ventana del navegador y no respetan el tener un contenedor padre que esté posicionado*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;/*indica el orden de un elemento posicionado y sus descendientes*/
+    display: flex;/*ayuda a distribuir el espacio entre los ítems de una interfaz y mejorar las capacidades de alineación*/
+    justify-content: space-between;/* Distribuir items uniformemente. El primer item al inicio, el último al final */
+    align-items: center;/* Agrupa los elementos alrededor del centro */
+    transition: 0.5s;
+}
+header.sticky{
+    background: #fff;
+    padding: 10px 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+header.sticky .logo {
+    color: #111;
+}
+header .logo span{
+    color: #ff0157;
+}
+header .navegation{
+    position: relative;
+    display: flex;
+}
+header .navegation li{
+    list-style: none;
+    margin-left: 30px;
+}
+header .navegation li a{
+    text-decoration: none;    
+    color: #fff;
+    font-weight: 300;
+}
+header.sticky .navegation li a{
+    color: #111;
+}
+header .navegation li a:hover{
+    color: #ff0157;
+}
+footer{
+    padding: 8px 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.title{
+    color: #111;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+.title span{
+    color: #ff0157;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.social{
+    margin: 10px 0;
+}
+
+.social a{
+    padding: 0 100px;
+    color: #111;
+}
+
+.social a:hover{
+    color: #ff0157;
+}
+/*PARTE RESPOSIVA*/
+@media only screen and (min-device-width : 480px) and (max-device-width : 1024px){
+    header, 
+    header.sticky{
+        padding: 10px 20px;
+    }
+    header .navegation{
+        display: none;
+    }
+    header .navegation.active{
+        width: 100%;
+        height: cal(100% =68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    /*
+    
+    */
+    header .navegation li{
+        margin-left: 0;
+    }
+    header .navegation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(ham.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active{
+        background: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 20px;
+    }
+    .banner .content h2{
+        font-size: 3em;
+        color:#fff;
+    }
+    /*
+    
+    */
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    header, 
+    header.sticky{
+        padding: 10px 20px;
+    }
+    header .navegation{
+        display: none;
+    }
+    header .navegation.active{
+        width: 100%;
+        height: cal(100% =68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    /*
+    
+    */
+    header .navegation li{
+        margin-left: 0;
+    }
+    header .navegation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(ham.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active{
+        background: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 20px;
+    }
+    .banner .content h2{
+        font-size: 3em;
+        color:#fff;
+    }
+    /*
+    
+    */
+    .banner .content h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+}

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* aplicar un modelo de diseño de caja natural a todos los elementos, pero permitiendo que los componentes cambien*/
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 100px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: url(https://images.unsplash.com/photo-1603056025063-15efdadeefef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+}
+/*PARTE RESPONSIVA*/
+@media only screen and (min-device-width : 480px) and (max-device-width : 1024px){
+    header, 
+    header.sticky{
+        padding: 10px 20px;
+    }
+    header .navegation{
+        display: none;
+    }
+    header .navegation.active{
+        width: 100%;
+        height: cal(100% =68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    /*
+    
+    */
+    header .navegation li{
+        margin-left: 0;
+    }
+    header .navegation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(ham.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active{
+        background: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 20px;
+    }
+    .banner .content h2{
+        font-size: 3em;
+        color:#fff;
+    }
+    /*
+    
+    */
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+    header, 
+    header.sticky{
+        padding: 10px 20px;
+        left: 190px;
+        width: 70%;
+    }
+    header .navegation{
+        display: none;
+    }
+    header .navegation.active{
+        width: 100%;
+        height: cal(100% =68px);
+        position: fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+    /*
+    
+    */
+    header .navegation li{
+        margin-left: 0;
+    }
+    header .navegation li a{
+        color: #111;
+        font-size: 1.6em;
+    }
+    .menuToggle{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(ham.png);
+        background-size: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .menuToggle.active{
+        background: url(close.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    header.sticky .menuToggle{
+        filter: invert(1);
+    }
+    section{
+        padding: 20px;
+    }
+    .banner .content h2{
+        font-size: 3em;
+        color:#fff;
+    }
+    /*
+    
+    */
+    .banner .content h2{
+        font-size: 2.2em;
+        color: #fff;
+    }
+    .criticos .content {
+        margin-top: 0;
+    }
+    .criticos .content .box {
+        width: 340px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .criticos .content .box .imgB {
+        margin-bottom: 10px;
+    }
+    .criticos .content .box .text h3 {
+        margin-top: 5px;
+    }
+    
+}
